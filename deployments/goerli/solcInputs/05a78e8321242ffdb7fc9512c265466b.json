@@ -1,0 +1,38 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ninterface AggregatorV3Interface {\n  function decimals() external view returns (uint8);\n\n  function description() external view returns (string memory);\n\n  function version() external view returns (uint256);\n\n  function getRoundData(uint80 _roundId)\n    external\n    view\n    returns (\n      uint80 roundId,\n      int256 answer,\n      uint256 startedAt,\n      uint256 updatedAt,\n      uint80 answeredInRound\n    );\n\n  function latestRoundData()\n    external\n    view\n    returns (\n      uint80 roundId,\n      int256 answer,\n      uint256 startedAt,\n      uint256 updatedAt,\n      uint80 answeredInRound\n    );\n}\n"
+    },
+    "contracts/DataFeedTask.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.7;\nimport \"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\";\n\n/*\n * 任务 1：\n * 通过 Chainlink Data Feed 获得 link，eth 和 btc 的 usd 价格\n * 参考视频教程：https://www.bilibili.com/video/BV1ed4y1N7Uv?p=3\n *\n * 任务 1 完成标志：\n * 1. 通过命令 \"yarn hardhat test\" 使得单元测试 1-7 通过\n * 2. 通过 Remix 在 goerli 测试网部署，并且测试执行是否如预期\n */\n\ncontract DataFeedTask {\n    AggregatorV3Interface internal linkPriceFeed;\n    AggregatorV3Interface internal btcPriceFeed;\n    AggregatorV3Interface internal ethPriceFeed;\n    address public owner;\n\n    modifier onlyOwner() {\n        require(msg.sender == owner);\n        _;\n    }\n\n    /**\n     * 步骤 1 - 在构造这里初始化 3 个 Aggregator\n     *\n     * 注意：\n     * 通过 Remix 部署在非本地环境中时\n     * 查看 aggregator 的地址 https://docs.chain.link/docs/ethereum-addresses/#Goerli%20Testnet，获得 Aggregator 合约地址\n     * 本地环境中相关参数已经在测试脚本中配置\n     *  */\n    constructor(\n        address _linkPriceFeed,\n        address _btcPriceFeed,\n        address _ethPriceFeed\n    ) {\n        owner = msg.sender;\n\n        //修改以下 solidity 代码\n        linkPriceFeed = AggregatorV3Interface(_linkPriceFeed);\n        btcPriceFeed = AggregatorV3Interface(_btcPriceFeed);\n        ethPriceFeed = AggregatorV3Interface(_ethPriceFeed);\n    }\n\n    /**\n     * 步骤 2 - 完成 getLinkLatestPrice 函数\n     * 获得 link/usd 的价格数据\n     */\n    function getLinkLatestPrice() public view returns (int256) {\n        //在此添加并且修改 solidity 代码\n        (, int256 answer, , , ) = linkPriceFeed.latestRoundData();\n        return answer;\n    }\n\n    /**\n     * 步骤 3 - 完成 getBtcLatestPrice 函数\n     * 获得 btc/usd 的价格数据\n     */\n    function getBtcLatestPrice() public view returns (int256) {\n        //在此添加并且修改 solidity 代码\n        (, int256 answer, , , ) = btcPriceFeed.latestRoundData();\n        return answer;\n    }\n\n    /**\n     * 步骤 4 - 完成 getEthLatestPrice 函数\n     * 获得 eth/usd 的价格数据\n     */\n    function getEthLatestPrice() public view returns (int256) {\n        //在此添加并且修改 solidity 代码\n        (, int256 answer, , , ) = ethPriceFeed.latestRoundData();\n        return answer;\n    }\n\n    /**\n     * 步骤 5 - 通过 Remix 将合约部署合约（使用 goerli 网络）\n     *\n     * 任务成功标志：\n     * 合约部署成功\n     * 获取 link/usd, btc/usd, eth/usd 价格\n     */\n\n    function getLinkPriceFeed() public view returns (AggregatorV3Interface) {\n        return linkPriceFeed;\n    }\n\n    function getBtcPriceFeed() public view returns (AggregatorV3Interface) {\n        return btcPriceFeed;\n    }\n\n    function getEthPriceFeed() public view returns (AggregatorV3Interface) {\n        return ethPriceFeed;\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "address": "0x364239A3fbE83420C81A5CAd80e567b5B731A2E7",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_linkPriceFeed",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_btcPriceFeed",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_ethPriceFeed",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "getBtcLatestPrice",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getBtcPriceFeed",
+      "outputs": [
+        {
+          "internalType": "contract AggregatorV3Interface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getEthLatestPrice",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getEthPriceFeed",
+      "outputs": [
+        {
+          "internalType": "contract AggregatorV3Interface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLinkLatestPrice",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLinkPriceFeed",
+      "outputs": [
+        {
+          "internalType": "contract AggregatorV3Interface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6684b58efa602b0b759e90836a4630e14d7a207fbd68e7ef8495d3c61df17739",
+  "receipt": {
+    "to": null,
+    "from": "0x45821AF32F0368fEeb7686c4CC10B7215E00Ab04",
+    "contractAddress": "0x364239A3fbE83420C81A5CAd80e567b5B731A2E7",
+    "transactionIndex": 5,
+    "gasUsed": "505588",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x2330a77b68eae0a3126b1da034b0b436af5bcc77d279461e548d93dc4cc5a0cd",
+    "transactionHash": "0x6684b58efa602b0b759e90836a4630e14d7a207fbd68e7ef8495d3c61df17739",
+    "logs": [],
+    "blockNumber": 8805749,
+    "cumulativeGasUsed": "624182",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x48731cF7e84dc94C5f84577882c14Be11a5B7456",
+    "0xA39434A63A52E749F02807ae27335515BA4b07F7",
+    "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "05a78e8321242ffdb7fc9512c265466b",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_linkPriceFeed\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_btcPriceFeed\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_ethPriceFeed\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"getBtcLatestPrice\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBtcPriceFeed\",\"outputs\":[{\"internalType\":\"contract AggregatorV3Interface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEthLatestPrice\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEthPriceFeed\",\"outputs\":[{\"internalType\":\"contract AggregatorV3Interface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLinkLatestPrice\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLinkPriceFeed\",\"outputs\":[{\"internalType\":\"contract AggregatorV3Interface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"\\u6b65\\u9aa4 1 - \\u5728\\u6784\\u9020\\u8fd9\\u91cc\\u521d\\u59cb\\u5316 3 \\u4e2a Aggregator \\u6ce8\\u610f\\uff1a \\u901a\\u8fc7 Remix \\u90e8\\u7f72\\u5728\\u975e\\u672c\\u5730\\u73af\\u5883\\u4e2d\\u65f6 \\u67e5\\u770b aggregator \\u7684\\u5730\\u5740 https://docs.chain.link/docs/ethereum-addresses/#Goerli%20Testnet\\uff0c\\u83b7\\u5f97 Aggregator \\u5408\\u7ea6\\u5730\\u5740 \\u672c\\u5730\\u73af\\u5883\\u4e2d\\u76f8\\u5173\\u53c2\\u6570\\u5df2\\u7ecf\\u5728\\u6d4b\\u8bd5\\u811a\\u672c\\u4e2d\\u914d\\u7f6e  \"},\"getBtcLatestPrice()\":{\"notice\":\"\\u6b65\\u9aa4 3 - \\u5b8c\\u6210 getBtcLatestPrice \\u51fd\\u6570 \\u83b7\\u5f97 btc/usd \\u7684\\u4ef7\\u683c\\u6570\\u636e\"},\"getEthLatestPrice()\":{\"notice\":\"\\u6b65\\u9aa4 4 - \\u5b8c\\u6210 getEthLatestPrice \\u51fd\\u6570 \\u83b7\\u5f97 eth/usd \\u7684\\u4ef7\\u683c\\u6570\\u636e\"},\"getLinkLatestPrice()\":{\"notice\":\"\\u6b65\\u9aa4 2 - \\u5b8c\\u6210 getLinkLatestPrice \\u51fd\\u6570 \\u83b7\\u5f97 link/usd \\u7684\\u4ef7\\u683c\\u6570\\u636e\"},\"getLinkPriceFeed()\":{\"notice\":\"\\u6b65\\u9aa4 5 - \\u901a\\u8fc7 Remix \\u5c06\\u5408\\u7ea6\\u90e8\\u7f72\\u5408\\u7ea6\\uff08\\u4f7f\\u7528 goerli \\u7f51\\u7edc\\uff09 \\u4efb\\u52a1\\u6210\\u529f\\u6807\\u5fd7\\uff1a \\u5408\\u7ea6\\u90e8\\u7f72\\u6210\\u529f \\u83b7\\u53d6 link/usd, btc/usd, eth/usd \\u4ef7\\u683c\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/DataFeedTask.sol\":\"DataFeedTask\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface AggregatorV3Interface {\\n  function decimals() external view returns (uint8);\\n\\n  function description() external view returns (string memory);\\n\\n  function version() external view returns (uint256);\\n\\n  function getRoundData(uint80 _roundId)\\n    external\\n    view\\n    returns (\\n      uint80 roundId,\\n      int256 answer,\\n      uint256 startedAt,\\n      uint256 updatedAt,\\n      uint80 answeredInRound\\n    );\\n\\n  function latestRoundData()\\n    external\\n    view\\n    returns (\\n      uint80 roundId,\\n      int256 answer,\\n      uint256 startedAt,\\n      uint256 updatedAt,\\n      uint80 answeredInRound\\n    );\\n}\\n\",\"keccak256\":\"0x6e6e4b0835904509406b070ee173b5bc8f677c19421b76be38aea3b1b3d30846\",\"license\":\"MIT\"},\"contracts/DataFeedTask.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.7;\\nimport \\\"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\\\";\\n\\n/*\\n * \\u4efb\\u52a1 1\\uff1a\\n * \\u901a\\u8fc7 Chainlink Data Feed \\u83b7\\u5f97 link\\uff0ceth \\u548c btc \\u7684 usd \\u4ef7\\u683c\\n * \\u53c2\\u8003\\u89c6\\u9891\\u6559\\u7a0b\\uff1ahttps://www.bilibili.com/video/BV1ed4y1N7Uv?p=3\\n *\\n * \\u4efb\\u52a1 1 \\u5b8c\\u6210\\u6807\\u5fd7\\uff1a\\n * 1. \\u901a\\u8fc7\\u547d\\u4ee4 \\\"yarn hardhat test\\\" \\u4f7f\\u5f97\\u5355\\u5143\\u6d4b\\u8bd5 1-7 \\u901a\\u8fc7\\n * 2. \\u901a\\u8fc7 Remix \\u5728 goerli \\u6d4b\\u8bd5\\u7f51\\u90e8\\u7f72\\uff0c\\u5e76\\u4e14\\u6d4b\\u8bd5\\u6267\\u884c\\u662f\\u5426\\u5982\\u9884\\u671f\\n */\\n\\ncontract DataFeedTask {\\n    AggregatorV3Interface internal linkPriceFeed;\\n    AggregatorV3Interface internal btcPriceFeed;\\n    AggregatorV3Interface internal ethPriceFeed;\\n    address public owner;\\n\\n    modifier onlyOwner() {\\n        require(msg.sender == owner);\\n        _;\\n    }\\n\\n    /**\\n     * \\u6b65\\u9aa4 1 - \\u5728\\u6784\\u9020\\u8fd9\\u91cc\\u521d\\u59cb\\u5316 3 \\u4e2a Aggregator\\n     *\\n     * \\u6ce8\\u610f\\uff1a\\n     * \\u901a\\u8fc7 Remix \\u90e8\\u7f72\\u5728\\u975e\\u672c\\u5730\\u73af\\u5883\\u4e2d\\u65f6\\n     * \\u67e5\\u770b aggregator \\u7684\\u5730\\u5740 https://docs.chain.link/docs/ethereum-addresses/#Goerli%20Testnet\\uff0c\\u83b7\\u5f97 Aggregator \\u5408\\u7ea6\\u5730\\u5740\\n     * \\u672c\\u5730\\u73af\\u5883\\u4e2d\\u76f8\\u5173\\u53c2\\u6570\\u5df2\\u7ecf\\u5728\\u6d4b\\u8bd5\\u811a\\u672c\\u4e2d\\u914d\\u7f6e\\n     *  */\\n    constructor(\\n        address _linkPriceFeed,\\n        address _btcPriceFeed,\\n        address _ethPriceFeed\\n    ) {\\n        owner = msg.sender;\\n\\n        //\\u4fee\\u6539\\u4ee5\\u4e0b solidity \\u4ee3\\u7801\\n        linkPriceFeed = AggregatorV3Interface(_linkPriceFeed);\\n        btcPriceFeed = AggregatorV3Interface(_btcPriceFeed);\\n        ethPriceFeed = AggregatorV3Interface(_ethPriceFeed);\\n    }\\n\\n    /**\\n     * \\u6b65\\u9aa4 2 - \\u5b8c\\u6210 getLinkLatestPrice \\u51fd\\u6570\\n     * \\u83b7\\u5f97 link/usd \\u7684\\u4ef7\\u683c\\u6570\\u636e\\n     */\\n    function getLinkLatestPrice() public view returns (int256) {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0\\u5e76\\u4e14\\u4fee\\u6539 solidity \\u4ee3\\u7801\\n        (, int256 answer, , , ) = linkPriceFeed.latestRoundData();\\n        return answer;\\n    }\\n\\n    /**\\n     * \\u6b65\\u9aa4 3 - \\u5b8c\\u6210 getBtcLatestPrice \\u51fd\\u6570\\n     * \\u83b7\\u5f97 btc/usd \\u7684\\u4ef7\\u683c\\u6570\\u636e\\n     */\\n    function getBtcLatestPrice() public view returns (int256) {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0\\u5e76\\u4e14\\u4fee\\u6539 solidity \\u4ee3\\u7801\\n        (, int256 answer, , , ) = btcPriceFeed.latestRoundData();\\n        return answer;\\n    }\\n\\n    /**\\n     * \\u6b65\\u9aa4 4 - \\u5b8c\\u6210 getEthLatestPrice \\u51fd\\u6570\\n     * \\u83b7\\u5f97 eth/usd \\u7684\\u4ef7\\u683c\\u6570\\u636e\\n     */\\n    function getEthLatestPrice() public view returns (int256) {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0\\u5e76\\u4e14\\u4fee\\u6539 solidity \\u4ee3\\u7801\\n        (, int256 answer, , , ) = ethPriceFeed.latestRoundData();\\n        return answer;\\n    }\\n\\n    /**\\n     * \\u6b65\\u9aa4 5 - \\u901a\\u8fc7 Remix \\u5c06\\u5408\\u7ea6\\u90e8\\u7f72\\u5408\\u7ea6\\uff08\\u4f7f\\u7528 goerli \\u7f51\\u7edc\\uff09\\n     *\\n     * \\u4efb\\u52a1\\u6210\\u529f\\u6807\\u5fd7\\uff1a\\n     * \\u5408\\u7ea6\\u90e8\\u7f72\\u6210\\u529f\\n     * \\u83b7\\u53d6 link/usd, btc/usd, eth/usd \\u4ef7\\u683c\\n     */\\n\\n    function getLinkPriceFeed() public view returns (AggregatorV3Interface) {\\n        return linkPriceFeed;\\n    }\\n\\n    function getBtcPriceFeed() public view returns (AggregatorV3Interface) {\\n        return btcPriceFeed;\\n    }\\n\\n    function getEthPriceFeed() public view returns (AggregatorV3Interface) {\\n        return ethPriceFeed;\\n    }\\n}\\n\",\"keccak256\":\"0x95a9df0cd8d9785fc58603886959a75ea4b4518669fec30d6e888c49c344ec7b\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161086b38038061086b833981810160405281019061003291906101a0565b33600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550826000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050506101f3565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061016d82610142565b9050919050565b61017d81610162565b811461018857600080fd5b50565b60008151905061019a81610174565b92915050565b6000806000606084860312156101b9576101b861013d565b5b60006101c78682870161018b565b93505060206101d88682870161018b565b92505060406101e98682870161018b565b9150509250925092565b610669806102026000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063a625d21d1161005b578063a625d21d146100dc578063afa7d1f0146100fa578063c20dbdaa14610118578063eb6eda5c146101365761007d565b806357b38264146100825780636a914f5e146100a05780638da5cb5b146100be575b600080fd5b61008a610154565b604051610097919061041e565b60405180910390f35b6100a8610202565b6040516100b591906104b8565b60405180910390f35b6100c661022b565b6040516100d391906104f4565b60405180910390f35b6100e4610251565b6040516100f1919061041e565b60405180910390f35b610102610301565b60405161010f91906104b8565b60405180910390f35b61012061032b565b60405161012d91906104b8565b60405180910390f35b61013e610355565b60405161014b919061041e565b60405180910390f35b60008060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156101bd57600080fd5b505afa1580156101d1573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101f591906105b8565b5050509150508091505090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156102bc57600080fd5b505afa1580156102d0573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102f491906105b8565b5050509150508091505090565b6000600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b600080600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156103c057600080fd5b505afa1580156103d4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103f891906105b8565b5050509150508091505090565b6000819050919050565b61041881610405565b82525050565b6000602082019050610433600083018461040f565b92915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600061047e61047961047484610439565b610459565b610439565b9050919050565b600061049082610463565b9050919050565b60006104a282610485565b9050919050565b6104b281610497565b82525050565b60006020820190506104cd60008301846104a9565b92915050565b60006104de82610439565b9050919050565b6104ee816104d3565b82525050565b600060208201905061050960008301846104e5565b92915050565b600080fd5b600069ffffffffffffffffffff82169050919050565b61053381610514565b811461053e57600080fd5b50565b6000815190506105508161052a565b92915050565b61055f81610405565b811461056a57600080fd5b50565b60008151905061057c81610556565b92915050565b6000819050919050565b61059581610582565b81146105a057600080fd5b50565b6000815190506105b28161058c565b92915050565b600080600080600060a086880312156105d4576105d361050f565b5b60006105e288828901610541565b95505060206105f38882890161056d565b9450506040610604888289016105a3565b9350506060610615888289016105a3565b925050608061062688828901610541565b915050929550929590935056fea26469706673582212208bd3babd74020f546834e3670fd021b52556ce8a7d6d5e40e3500f1b4970542664736f6c63430008090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063a625d21d1161005b578063a625d21d146100dc578063afa7d1f0146100fa578063c20dbdaa14610118578063eb6eda5c146101365761007d565b806357b38264146100825780636a914f5e146100a05780638da5cb5b146100be575b600080fd5b61008a610154565b604051610097919061041e565b60405180910390f35b6100a8610202565b6040516100b591906104b8565b60405180910390f35b6100c661022b565b6040516100d391906104f4565b60405180910390f35b6100e4610251565b6040516100f1919061041e565b60405180910390f35b610102610301565b60405161010f91906104b8565b60405180910390f35b61012061032b565b60405161012d91906104b8565b60405180910390f35b61013e610355565b60405161014b919061041e565b60405180910390f35b60008060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156101bd57600080fd5b505afa1580156101d1573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101f591906105b8565b5050509150508091505090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156102bc57600080fd5b505afa1580156102d0573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102f491906105b8565b5050509150508091505090565b6000600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b600080600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156103c057600080fd5b505afa1580156103d4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103f891906105b8565b5050509150508091505090565b6000819050919050565b61041881610405565b82525050565b6000602082019050610433600083018461040f565b92915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600061047e61047961047484610439565b610459565b610439565b9050919050565b600061049082610463565b9050919050565b60006104a282610485565b9050919050565b6104b281610497565b82525050565b60006020820190506104cd60008301846104a9565b92915050565b60006104de82610439565b9050919050565b6104ee816104d3565b82525050565b600060208201905061050960008301846104e5565b92915050565b600080fd5b600069ffffffffffffffffffff82169050919050565b61053381610514565b811461053e57600080fd5b50565b6000815190506105508161052a565b92915050565b61055f81610405565b811461056a57600080fd5b50565b60008151905061057c81610556565b92915050565b6000819050919050565b61059581610582565b81146105a057600080fd5b50565b6000815190506105b28161058c565b92915050565b600080600080600060a086880312156105d4576105d361050f565b5b60006105e288828901610541565b95505060206105f38882890161056d565b9450506040610604888289016105a3565b9350506060610615888289016105a3565b925050608061062688828901610541565b915050929550929590935056fea26469706673582212208bd3babd74020f546834e3670fd021b52556ce8a7d6d5e40e3500f1b4970542664736f6c63430008090033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "constructor": {
+        "notice": "步骤 1 - 在构造这里初始化 3 个 Aggregator 注意： 通过 Remix 部署在非本地环境中时 查看 aggregator 的地址 https://docs.chain.link/docs/ethereum-addresses/#Goerli%20Testnet，获得 Aggregator 合约地址 本地环境中相关参数已经在测试脚本中配置  "
+      },
+      "getBtcLatestPrice()": {
+        "notice": "步骤 3 - 完成 getBtcLatestPrice 函数 获得 btc/usd 的价格数据"
+      },
+      "getEthLatestPrice()": {
+        "notice": "步骤 4 - 完成 getEthLatestPrice 函数 获得 eth/usd 的价格数据"
+      },
+      "getLinkLatestPrice()": {
+        "notice": "步骤 2 - 完成 getLinkLatestPrice 函数 获得 link/usd 的价格数据"
+      },
+      "getLinkPriceFeed()": {
+        "notice": "步骤 5 - 通过 Remix 将合约部署合约（使用 goerli 网络） 任务成功标志： 合约部署成功 获取 link/usd, btc/usd, eth/usd 价格"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 51,
+        "contract": "contracts/DataFeedTask.sol:DataFeedTask",
+        "label": "linkPriceFeed",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_contract(AggregatorV3Interface)45"
+      },
+      {
+        "astId": 54,
+        "contract": "contracts/DataFeedTask.sol:DataFeedTask",
+        "label": "btcPriceFeed",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_contract(AggregatorV3Interface)45"
+      },
+      {
+        "astId": 57,
+        "contract": "contracts/DataFeedTask.sol:DataFeedTask",
+        "label": "ethPriceFeed",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_contract(AggregatorV3Interface)45"
+      },
+      {
+        "astId": 59,
+        "contract": "contracts/DataFeedTask.sol:DataFeedTask",
+        "label": "owner",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(AggregatorV3Interface)45": {
+        "encoding": "inplace",
+        "label": "contract AggregatorV3Interface",
+        "numberOfBytes": "20"
+      }
+    }
+  }
+}
