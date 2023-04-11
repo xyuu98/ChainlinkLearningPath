@@ -140,6 +140,6 @@ contract VRFTask is VRFConsumerBaseV2 {
     }
 }
 
-// VRFTask deployed at 0x9625a1ed1dd89daefe31dc21e26953b33e35a1a2
+// VRFTask deployed at 0xC243790F5db9159861A0138362fA2336Da424BAD
 // Successfully verified contract DataFeedTask on Etherscan.
 // https://goerli.etherscan.io/address/0xc243790f5db9159861a0138362fa2336da424bad#code
