@@ -1,209 +1,207 @@
 {
-  "address": "0xf57ecC8BdC5366A45f776828042ea2fF25f5E9D1",
-  "abi": [
-    {
-      "inputs": [
+    "address": "0xf57ecC8BdC5366A45f776828042ea2fF25f5E9D1",
+    "abi": [
         {
-          "internalType": "uint256",
-          "name": "_interval",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "inputs": [],
-      "name": "OnlySimulatedBackend",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "MAXIMUM_HEALTH",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "SIZE",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        }
-      ],
-      "name": "checkUpkeep",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "upkeepNeeded",
-          "type": "bool"
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_interval",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
         },
         {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
+            "inputs": [],
+            "name": "OnlySimulatedBackend",
+            "type": "error"
+        },
         {
-          "internalType": "uint256",
-          "name": "fighter",
-          "type": "uint256"
-        }
-      ],
-      "name": "fight",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
+            "inputs": [],
+            "name": "MAXIMUM_HEALTH",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
         {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "healthPoint",
-      "outputs": [
+            "inputs": [],
+            "name": "SIZE",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
         {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "interval",
-      "outputs": [
+            "inputs": [
+                {
+                    "internalType": "bytes",
+                    "name": "",
+                    "type": "bytes"
+                }
+            ],
+            "name": "checkUpkeep",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "upkeepNeeded",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "bytes",
+                    "name": "",
+                    "type": "bytes"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
         {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "lastTimeStamp",
-      "outputs": [
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "fighter",
+                    "type": "uint256"
+                }
+            ],
+            "name": "fight",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
         {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "healthPoint",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
         {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
+            "inputs": [],
+            "name": "interval",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "lastTimeStamp",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes",
+                    "name": "",
+                    "type": "bytes"
+                }
+            ],
+            "name": "performUpkeep",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
         }
-      ],
-      "name": "performUpkeep",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }
-  ],
-  "transactionHash": "0x8fd7dd89207e054884bc69f8607543053b646c41c592bca6b1b02f305f96ea08",
-  "receipt": {
-    "to": null,
-    "from": "0x45821AF32F0368fEeb7686c4CC10B7215E00Ab04",
-    "contractAddress": "0xf57ecC8BdC5366A45f776828042ea2fF25f5E9D1",
-    "transactionIndex": 34,
-    "gasUsed": "764277",
-    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-    "blockHash": "0xddb1313c00ba16a875f7cb20ff55e9f02cdcc5da3f1b64f5e7a39b43eb7b38cc",
-    "transactionHash": "0x8fd7dd89207e054884bc69f8607543053b646c41c592bca6b1b02f305f96ea08",
-    "logs": [],
-    "blockNumber": 3268751,
-    "cumulativeGasUsed": "4352008",
-    "status": 1,
-    "byzantium": true
-  },
-  "args": [
-    3600
-  ],
-  "numDeployments": 1,
-  "solcInputHash": "0667cf22c3dd6b8891b5b399ce87e843",
-  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_interval\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"OnlySimulatedBackend\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"MAXIMUM_HEALTH\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"checkUpkeep\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"upkeepNeeded\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fighter\",\"type\":\"uint256\"}],\"name\":\"fight\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"healthPoint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"interval\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lastTimeStamp\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"performUpkeep\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/AutomationTask.sol\":\"AutomationTask\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.8/AutomationBase.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ncontract AutomationBase {\\n  error OnlySimulatedBackend();\\n\\n  /**\\n   * @notice method that allows it to be simulated via eth_call by checking that\\n   * the sender is the zero address.\\n   */\\n  function preventExecution() internal view {\\n    if (tx.origin != address(0)) {\\n      revert OnlySimulatedBackend();\\n    }\\n  }\\n\\n  /**\\n   * @notice modifier that allows it to be simulated via eth_call by checking\\n   * that the sender is the zero address.\\n   */\\n  modifier cannotExecute() {\\n    preventExecution();\\n    _;\\n  }\\n}\\n\",\"keccak256\":\"0x5d354afa1a97dffe66094397cdcbb0c14713cf3d609d88fd8f9891010e9a351a\",\"license\":\"MIT\"},\"@chainlink/contracts/src/v0.8/AutomationCompatible.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"./AutomationBase.sol\\\";\\nimport \\\"./interfaces/AutomationCompatibleInterface.sol\\\";\\n\\nabstract contract AutomationCompatible is AutomationBase, AutomationCompatibleInterface {}\\n\",\"keccak256\":\"0x40e5ae0eff4edd0740c1b5590d09c344f84dee031e82d5294563e99603774f80\",\"license\":\"MIT\"},\"@chainlink/contracts/src/v0.8/interfaces/AutomationCompatibleInterface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface AutomationCompatibleInterface {\\n  /**\\n   * @notice method that is simulated by the keepers to see if any work actually\\n   * needs to be performed. This method does does not actually need to be\\n   * executable, and since it is only ever simulated it can consume lots of gas.\\n   * @dev To ensure that it is never called, you may want to add the\\n   * cannotExecute modifier from KeeperBase to your implementation of this\\n   * method.\\n   * @param checkData specified in the upkeep registration so it is always the\\n   * same for a registered upkeep. This can easily be broken down into specific\\n   * arguments using `abi.decode`, so multiple upkeeps can be registered on the\\n   * same contract and easily differentiated by the contract.\\n   * @return upkeepNeeded boolean to indicate whether the keeper should call\\n   * performUpkeep or not.\\n   * @return performData bytes that the keeper should call performUpkeep with, if\\n   * upkeep is needed. If you would like to encode data to decode later, try\\n   * `abi.encode`.\\n   */\\n  function checkUpkeep(bytes calldata checkData) external returns (bool upkeepNeeded, bytes memory performData);\\n\\n  /**\\n   * @notice method that is actually executed by the keepers, via the registry.\\n   * The data returned by the checkUpkeep simulation will be passed into\\n   * this method to actually be executed.\\n   * @dev The input to this method should not be trusted, and the caller of the\\n   * method should not even be restricted to any single registry. Anyone should\\n   * be able call it, and the input should be validated, there is no guarantee\\n   * that the data passed in is the performData returned from checkUpkeep. This\\n   * could happen due to malicious keepers, racing keepers, or simply a state\\n   * change while the performUpkeep transaction is waiting for confirmation.\\n   * Always validate the data passed in.\\n   * @param performData is the data which was passed back from the checkData\\n   * simulation. If it is encoded, it can easily be decoded into other types by\\n   * calling `abi.decode`. This data should not be trusted, and should be\\n   * validated against the contract's current state.\\n   */\\n  function performUpkeep(bytes calldata performData) external;\\n}\\n\",\"keccak256\":\"0x67076747c6f66d8d43472a56e72879c350056bff82e069addaf9064922863340\",\"license\":\"MIT\"},\"contracts/AutomationTask.sol\":{\"content\":\"// SPDX-License-Identifier: SEE LICENSE IN LICENSE\\npragma solidity ^0.8.7;\\n\\nimport \\\"@chainlink/contracts/src/v0.8/AutomationCompatible.sol\\\";\\n\\n/*\\n * \\u4efb\\u52a1 3 \\u5185\\u5bb9\\uff0c\\u8bd5\\u60f3\\u4e00\\u4e2a\\u5c0f\\u6e38\\u620f\\uff0c\\u4e00\\u4e2a\\u6570\\u7ec4\\u4f4d\\u7f6e\\u89d2\\u8272\\u7684\\u751f\\u547d\\u503c\\uff08healthPoint\\uff09\\n * HP \\u521d\\u59cb\\u503c\\u4e3a 1000\\uff0c\\u6bcf\\u6b21\\u653b\\u51fb\\uff08fight\\uff09\\u4f1a\\u964d\\u4f4e 100\\u3002\\n *\\n * \\u6ee1\\u8db3\\u4ee5\\u4e0b\\u4e24\\u4e2a\\u6761\\u4ef6\\u5c31\\u53ef\\u4ee5\\u901a\\u8fc7 Automation \\u8865\\u5145\\u4e3a 1000\\uff1a\\n * 1. \\u5982\\u679c\\u751f\\u547d\\u503c\\u4e0d\\u8db3 1000\\n * 2. \\u7ecf\\u8fc7\\u4e00\\u4e2a\\u65f6\\u95f4\\u95f4\\u9694 interval\\n * \\u8bf7\\u5b8c\\u6210\\u4ee5\\u4e0b\\u4ee3\\u7801\\uff0c\\u5b9e\\u73b0\\u4e0a\\u8ff0\\u903b\\u8f91\\n *\\n * \\u53c2\\u8003\\u89c6\\u9891\\u6559\\u7a0b\\uff1ahttps://www.bilibili.com/video/BV1ed4y1N7Uv?p=9\\n *\\n * \\u4efb\\u52a1 3 \\u5b8c\\u6210\\u6807\\u5fd7\\uff1a\\n * 1. \\u901a\\u8fc7\\u547d\\u4ee4 \\\"yarn hardhat test\\\" \\u4f7f\\u5f97\\u5355\\u5143\\u6d4b\\u8bd5 11-12 \\u901a\\u8fc7\\n * 2. \\u901a\\u8fc7 Remix \\u5728 goerli \\u6d4b\\u8bd5\\u7f51\\u90e8\\u7f72\\uff0c\\u5e76\\u4e14\\u6d4b\\u8bd5\\u6267\\u884c\\u662f\\u5426\\u5982\\u9884\\u671f\\n */\\n\\ncontract AutomationTask is AutomationCompatible {\\n    uint256 public constant SIZE = 10;\\n    uint256 public constant MAXIMUM_HEALTH = 1000;\\n    uint256[SIZE] public healthPoint;\\n    uint256 public lastTimeStamp;\\n    uint256 public immutable interval;\\n\\n    /*\\n     * \\u6b65\\u9aa4 1 - \\u5728\\u6784\\u9020\\u51fd\\u6570\\u4e2d\\u5b8c\\u6210\\u6570\\u7ec4 healthPoint \\u7684\\u521d\\u59cb\\u5316\\n     */\\n    constructor(uint256 _interval) {\\n        lastTimeStamp = block.timestamp;\\n        interval = _interval;\\n        //\\u5728\\u6b64\\u6dfb\\u52a0 solidity \\u4ee3\\u7801\\n        for (uint i = 0; i < SIZE; i++) {\\n            healthPoint[i] = MAXIMUM_HEALTH;\\n        }\\n    }\\n\\n    /*\\n     * \\u6b65\\u9aa4 2 - \\u5b9a\\u4e49 fight \\u51fd\\u6570\\n     * \\u4f7f\\u5f97\\u7528\\u6237\\u53ef\\u4ee5\\u901a\\u8fc7 fight \\u51fd\\u6570\\u6539\\u53d8\\u6570\\u7ec4\\u4e2d\\u7684\\u751f\\u547d\\u503c\\n     */\\n    function fight(uint256 fighter) public {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0 solidity \\u4ee3\\u7801\\n        require(fighter <= SIZE - 1, \\\"Over SIZE!\\\");\\n        healthPoint[fighter] -= 100;\\n    }\\n\\n    /*\\n     * \\u6b65\\u9aa4 3 - \\u901a\\u8fc7 checkUpKeep \\u6765\\u68c0\\u6d4b\\uff1a\\n     * 1. \\u6570\\u7ec4 healthPoint \\u4e2d\\u7684\\u6570\\u503c\\u662f\\u5426\\u5c0f\\u4e8e 1000\\n     * 2. \\u662f\\u5426\\u7ecf\\u8fc7\\u4e86\\u65f6\\u95f4\\u95f4\\u9694 interval\\n     *\\n     * \\u6ce8\\u610f\\uff1a\\n     * \\u8fd9\\u90e8\\u5206\\u64cd\\u4f5c\\u5c06\\u7531 Chainlink \\u9884\\u8a00\\u673a\\u8282\\u70b9\\u5728\\u94fe\\u4e0b\\u8ba1\\u7b97\\uff0c\\u672c\\u5730\\u73af\\u5883\\u4e2d\\u5df2\\u7531\\u811a\\u672c\\u914d\\u7f6e\\n     * \\u53ef\\u4ee5\\u5c1d\\u8bd5\\u5728 checkUpKeep \\u51fd\\u6570\\u4e2d\\u6539\\u53d8\\u72b6\\u6001\\uff0c\\u89c2\\u5bdf\\u662f\\u5426\\u4f1a\\u53d1\\u751f\\u6539\\u53d8\\n     */\\n    function checkUpkeep(\\n        bytes memory /* checkData*/\\n    )\\n        public\\n        view\\n        override\\n        returns (bool upkeepNeeded, bytes memory /*performData*/)\\n    {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0\\u548c\\u4fee\\u6539 solidity \\u4ee3\\u7801\\n        upkeepNeeded = false;\\n        for (uint256 i = 0; i < SIZE && !upkeepNeeded; i++) {\\n            if (\\n                healthPoint[i] < MAXIMUM_HEALTH ||\\n                lastTimeStamp + interval >= block.timestamp\\n            ) {\\n                upkeepNeeded = true;\\n            }\\n        }\\n        return (upkeepNeeded, \\\"\\\");\\n    }\\n\\n    /*\\n     * \\u6b65\\u9aa4 4 - \\u901a\\u8fc7 performUpKeep \\u6765\\u5b8c\\u6210\\u5c06\\u8865\\u8db3\\u6570\\u7ec4\\u4e2d\\u751f\\u547d\\u503c\\u7684\\u64cd\\u4f5c\\n     * \\u4f8b\\u5982\\u53d1\\u73b0 healthPoint[0] = 500\\uff0c\\u5219\\u5c06\\u5176\\u589e\\u52a0 500 \\u53d8\\u4e3a 1000\\n     *\\n     * \\u6ce8\\u610f\\uff1a\\n     * \\u53ef\\u4ee5\\u901a\\u8fc7 performData \\u4f7f\\u7528 checkUpkeep \\u7684\\u8fd0\\u7b97\\u7ed3\\u679c\\uff0c\\u51cf\\u5c11 gas \\u8d39\\u7528\\n     */\\n    function performUpkeep(bytes memory /*performData*/) external override {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0 solidity \\u4ee3\\u7801\\n        for (uint i = 0; i < SIZE; i++) {\\n            if (healthPoint[i] < MAXIMUM_HEALTH) {\\n                healthPoint[i] = MAXIMUM_HEALTH;\\n            }\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x5cd69e2c5aadd5b89777e52474c7d67391c1390da49eda83df9b26abe818604e\",\"license\":\"SEE LICENSE IN LICENSE\"}},\"version\":1}",
-  "bytecode": "0x60a060405234801561001057600080fd5b50604051610a10380380610a10833981810160405281019061003291906100be565b42600a81905550806080818152505060005b600a81101561007c576103e8600082600a8110610064576100636100eb565b5b0181905550808061007490610149565b915050610044565b5050610192565b600080fd5b6000819050919050565b61009b81610088565b81146100a657600080fd5b50565b6000815190506100b881610092565b92915050565b6000602082840312156100d4576100d3610083565b5b60006100e2848285016100a9565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600061015482610088565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8214156101875761018661011a565b5b600182019050919050565b60805161085c6101b46000396000818161024401526102ad015261085c6000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c8063bdffd2821161005b578063bdffd28214610116578063df6a37aa14610134578063e98971d014610150578063f5ff71541461016e57610088565b80633f3b3b271461008d5780634585e33b146100ab5780636e04ff0d146100c7578063947a36fb146100f8575b600080fd5b61009561019e565b6040516100a2919061038e565b60405180910390f35b6100c560048036038101906100c09190610503565b6101a4565b005b6100e160048036038101906100dc9190610503565b610203565b6040516100ef9291906105ef565b60405180910390f35b6101006102ab565b60405161010d919061038e565b60405180910390f35b61011e6102cf565b60405161012b919061038e565b60405180910390f35b61014e6004803603810190610149919061064b565b6102d4565b005b610158610354565b604051610165919061038e565b60405180910390f35b6101886004803603810190610183919061064b565b61035a565b604051610195919061038e565b60405180910390f35b600a5481565b60005b600a8110156101ff576103e8600082600a81106101c7576101c6610678565b5b015410156101ec576103e8600082600a81106101e6576101e5610678565b5b01819055505b80806101f7906106d6565b9150506101a7565b5050565b600060606000915060005b600a8110801561021c575082155b15610290576103e8600082600a811061023857610237610678565b5b015410806102735750427f0000000000000000000000000000000000000000000000000000000000000000600a54610270919061071f565b10155b1561027d57600192505b8080610288906106d6565b91505061020e565b50816040518060200160405280600081525091509150915091565b7f000000000000000000000000000000000000000000000000000000000000000081565b600a81565b6001600a6102e29190610775565b811115610324576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161031b90610806565b60405180910390fd5b6064600082600a811061033a57610339610678565b5b01600082825461034a9190610775565b9250508190555050565b6103e881565b600081600a811061036a57600080fd5b016000915090505481565b6000819050919050565b61038881610375565b82525050565b60006020820190506103a3600083018461037f565b92915050565b6000604051905090565b600080fd5b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610410826103c7565b810181811067ffffffffffffffff8211171561042f5761042e6103d8565b5b80604052505050565b60006104426103a9565b905061044e8282610407565b919050565b600067ffffffffffffffff82111561046e5761046d6103d8565b5b610477826103c7565b9050602081019050919050565b82818337600083830152505050565b60006104a66104a184610453565b610438565b9050828152602081018484840111156104c2576104c16103c2565b5b6104cd848285610484565b509392505050565b600082601f8301126104ea576104e96103bd565b5b81356104fa848260208601610493565b91505092915050565b600060208284031215610519576105186103b3565b5b600082013567ffffffffffffffff811115610537576105366103b8565b5b610543848285016104d5565b91505092915050565b60008115159050919050565b6105618161054c565b82525050565b600081519050919050565b600082825260208201905092915050565b60005b838110156105a1578082015181840152602081019050610586565b838111156105b0576000848401525b50505050565b60006105c182610567565b6105cb8185610572565b93506105db818560208601610583565b6105e4816103c7565b840191505092915050565b60006040820190506106046000830185610558565b818103602083015261061681846105b6565b90509392505050565b61062881610375565b811461063357600080fd5b50565b6000813590506106458161061f565b92915050565b600060208284031215610661576106606103b3565b5b600061066f84828501610636565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006106e182610375565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff821415610714576107136106a7565b5b600182019050919050565b600061072a82610375565b915061073583610375565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0382111561076a576107696106a7565b5b828201905092915050565b600061078082610375565b915061078b83610375565b92508282101561079e5761079d6106a7565b5b828203905092915050565b600082825260208201905092915050565b7f4f7665722053495a452100000000000000000000000000000000000000000000600082015250565b60006107f0600a836107a9565b91506107fb826107ba565b602082019050919050565b6000602082019050818103600083015261081f816107e3565b905091905056fea2646970667358221220b55416ce2fd708f63d6836c099e270788bfc243a38a095632292008acada5e6c64736f6c63430008090033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c8063bdffd2821161005b578063bdffd28214610116578063df6a37aa14610134578063e98971d014610150578063f5ff71541461016e57610088565b80633f3b3b271461008d5780634585e33b146100ab5780636e04ff0d146100c7578063947a36fb146100f8575b600080fd5b61009561019e565b6040516100a2919061038e565b60405180910390f35b6100c560048036038101906100c09190610503565b6101a4565b005b6100e160048036038101906100dc9190610503565b610203565b6040516100ef9291906105ef565b60405180910390f35b6101006102ab565b60405161010d919061038e565b60405180910390f35b61011e6102cf565b60405161012b919061038e565b60405180910390f35b61014e6004803603810190610149919061064b565b6102d4565b005b610158610354565b604051610165919061038e565b60405180910390f35b6101886004803603810190610183919061064b565b61035a565b604051610195919061038e565b60405180910390f35b600a5481565b60005b600a8110156101ff576103e8600082600a81106101c7576101c6610678565b5b015410156101ec576103e8600082600a81106101e6576101e5610678565b5b01819055505b80806101f7906106d6565b9150506101a7565b5050565b600060606000915060005b600a8110801561021c575082155b15610290576103e8600082600a811061023857610237610678565b5b015410806102735750427f0000000000000000000000000000000000000000000000000000000000000000600a54610270919061071f565b10155b1561027d57600192505b8080610288906106d6565b91505061020e565b50816040518060200160405280600081525091509150915091565b7f000000000000000000000000000000000000000000000000000000000000000081565b600a81565b6001600a6102e29190610775565b811115610324576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161031b90610806565b60405180910390fd5b6064600082600a811061033a57610339610678565b5b01600082825461034a9190610775565b9250508190555050565b6103e881565b600081600a811061036a57600080fd5b016000915090505481565b6000819050919050565b61038881610375565b82525050565b60006020820190506103a3600083018461037f565b92915050565b6000604051905090565b600080fd5b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610410826103c7565b810181811067ffffffffffffffff8211171561042f5761042e6103d8565b5b80604052505050565b60006104426103a9565b905061044e8282610407565b919050565b600067ffffffffffffffff82111561046e5761046d6103d8565b5b610477826103c7565b9050602081019050919050565b82818337600083830152505050565b60006104a66104a184610453565b610438565b9050828152602081018484840111156104c2576104c16103c2565b5b6104cd848285610484565b509392505050565b600082601f8301126104ea576104e96103bd565b5b81356104fa848260208601610493565b91505092915050565b600060208284031215610519576105186103b3565b5b600082013567ffffffffffffffff811115610537576105366103b8565b5b610543848285016104d5565b91505092915050565b60008115159050919050565b6105618161054c565b82525050565b600081519050919050565b600082825260208201905092915050565b60005b838110156105a1578082015181840152602081019050610586565b838111156105b0576000848401525b50505050565b60006105c182610567565b6105cb8185610572565b93506105db818560208601610583565b6105e4816103c7565b840191505092915050565b60006040820190506106046000830185610558565b818103602083015261061681846105b6565b90509392505050565b61062881610375565b811461063357600080fd5b50565b6000813590506106458161061f565b92915050565b600060208284031215610661576106606103b3565b5b600061066f84828501610636565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006106e182610375565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff821415610714576107136106a7565b5b600182019050919050565b600061072a82610375565b915061073583610375565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0382111561076a576107696106a7565b5b828201905092915050565b600061078082610375565b915061078b83610375565b92508282101561079e5761079d6106a7565b5b828203905092915050565b600082825260208201905092915050565b7f4f7665722053495a452100000000000000000000000000000000000000000000600082015250565b60006107f0600a836107a9565b91506107fb826107ba565b602082019050919050565b6000602082019050818103600083015261081f816107e3565b905091905056fea2646970667358221220b55416ce2fd708f63d6836c099e270788bfc243a38a095632292008acada5e6c64736f6c63430008090033",
-  "devdoc": {
-    "kind": "dev",
-    "methods": {},
-    "version": 1
-  },
-  "userdoc": {
-    "kind": "user",
-    "methods": {},
-    "version": 1
-  },
-  "storageLayout": {
-    "storage": [
-      {
-        "astId": 226,
-        "contract": "contracts/AutomationTask.sol:AutomationTask",
-        "label": "healthPoint",
-        "offset": 0,
-        "slot": "0",
-        "type": "t_array(t_uint256)10_storage"
-      },
-      {
-        "astId": 228,
-        "contract": "contracts/AutomationTask.sol:AutomationTask",
-        "label": "lastTimeStamp",
-        "offset": 0,
-        "slot": "10",
-        "type": "t_uint256"
-      }
     ],
-    "types": {
-      "t_array(t_uint256)10_storage": {
-        "base": "t_uint256",
-        "encoding": "inplace",
-        "label": "uint256[10]",
-        "numberOfBytes": "320"
-      },
-      "t_uint256": {
-        "encoding": "inplace",
-        "label": "uint256",
-        "numberOfBytes": "32"
-      }
+    "transactionHash": "0x8fd7dd89207e054884bc69f8607543053b646c41c592bca6b1b02f305f96ea08",
+    "receipt": {
+        "to": null,
+        "from": "0x45821AF32F0368fEeb7686c4CC10B7215E00Ab04",
+        "contractAddress": "0xf57ecC8BdC5366A45f776828042ea2fF25f5E9D1",
+        "transactionIndex": 34,
+        "gasUsed": "764277",
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "blockHash": "0xddb1313c00ba16a875f7cb20ff55e9f02cdcc5da3f1b64f5e7a39b43eb7b38cc",
+        "transactionHash": "0x8fd7dd89207e054884bc69f8607543053b646c41c592bca6b1b02f305f96ea08",
+        "logs": [],
+        "blockNumber": 3268751,
+        "cumulativeGasUsed": "4352008",
+        "status": 1,
+        "byzantium": true
+    },
+    "args": [3600],
+    "numDeployments": 1,
+    "solcInputHash": "0667cf22c3dd6b8891b5b399ce87e843",
+    "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_interval\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"OnlySimulatedBackend\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"MAXIMUM_HEALTH\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"checkUpkeep\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"upkeepNeeded\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fighter\",\"type\":\"uint256\"}],\"name\":\"fight\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"healthPoint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"interval\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lastTimeStamp\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"performUpkeep\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/AutomationTask.sol\":\"AutomationTask\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.8/AutomationBase.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ncontract AutomationBase {\\n  error OnlySimulatedBackend();\\n\\n  /**\\n   * @notice method that allows it to be simulated via eth_call by checking that\\n   * the sender is the zero address.\\n   */\\n  function preventExecution() internal view {\\n    if (tx.origin != address(0)) {\\n      revert OnlySimulatedBackend();\\n    }\\n  }\\n\\n  /**\\n   * @notice modifier that allows it to be simulated via eth_call by checking\\n   * that the sender is the zero address.\\n   */\\n  modifier cannotExecute() {\\n    preventExecution();\\n    _;\\n  }\\n}\\n\",\"keccak256\":\"0x5d354afa1a97dffe66094397cdcbb0c14713cf3d609d88fd8f9891010e9a351a\",\"license\":\"MIT\"},\"@chainlink/contracts/src/v0.8/AutomationCompatible.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"./AutomationBase.sol\\\";\\nimport \\\"./interfaces/AutomationCompatibleInterface.sol\\\";\\n\\nabstract contract AutomationCompatible is AutomationBase, AutomationCompatibleInterface {}\\n\",\"keccak256\":\"0x40e5ae0eff4edd0740c1b5590d09c344f84dee031e82d5294563e99603774f80\",\"license\":\"MIT\"},\"@chainlink/contracts/src/v0.8/interfaces/AutomationCompatibleInterface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface AutomationCompatibleInterface {\\n  /**\\n   * @notice method that is simulated by the keepers to see if any work actually\\n   * needs to be performed. This method does does not actually need to be\\n   * executable, and since it is only ever simulated it can consume lots of gas.\\n   * @dev To ensure that it is never called, you may want to add the\\n   * cannotExecute modifier from KeeperBase to your implementation of this\\n   * method.\\n   * @param checkData specified in the upkeep registration so it is always the\\n   * same for a registered upkeep. This can easily be broken down into specific\\n   * arguments using `abi.decode`, so multiple upkeeps can be registered on the\\n   * same contract and easily differentiated by the contract.\\n   * @return upkeepNeeded boolean to indicate whether the keeper should call\\n   * performUpkeep or not.\\n   * @return performData bytes that the keeper should call performUpkeep with, if\\n   * upkeep is needed. If you would like to encode data to decode later, try\\n   * `abi.encode`.\\n   */\\n  function checkUpkeep(bytes calldata checkData) external returns (bool upkeepNeeded, bytes memory performData);\\n\\n  /**\\n   * @notice method that is actually executed by the keepers, via the registry.\\n   * The data returned by the checkUpkeep simulation will be passed into\\n   * this method to actually be executed.\\n   * @dev The input to this method should not be trusted, and the caller of the\\n   * method should not even be restricted to any single registry. Anyone should\\n   * be able call it, and the input should be validated, there is no guarantee\\n   * that the data passed in is the performData returned from checkUpkeep. This\\n   * could happen due to malicious keepers, racing keepers, or simply a state\\n   * change while the performUpkeep transaction is waiting for confirmation.\\n   * Always validate the data passed in.\\n   * @param performData is the data which was passed back from the checkData\\n   * simulation. If it is encoded, it can easily be decoded into other types by\\n   * calling `abi.decode`. This data should not be trusted, and should be\\n   * validated against the contract's current state.\\n   */\\n  function performUpkeep(bytes calldata performData) external;\\n}\\n\",\"keccak256\":\"0x67076747c6f66d8d43472a56e72879c350056bff82e069addaf9064922863340\",\"license\":\"MIT\"},\"contracts/AutomationTask.sol\":{\"content\":\"// SPDX-License-Identifier: SEE LICENSE IN LICENSE\\npragma solidity ^0.8.7;\\n\\nimport \\\"@chainlink/contracts/src/v0.8/AutomationCompatible.sol\\\";\\n\\n/*\\n * \\u4efb\\u52a1 3 \\u5185\\u5bb9\\uff0c\\u8bd5\\u60f3\\u4e00\\u4e2a\\u5c0f\\u6e38\\u620f\\uff0c\\u4e00\\u4e2a\\u6570\\u7ec4\\u4f4d\\u7f6e\\u89d2\\u8272\\u7684\\u751f\\u547d\\u503c\\uff08healthPoint\\uff09\\n * HP \\u521d\\u59cb\\u503c\\u4e3a 1000\\uff0c\\u6bcf\\u6b21\\u653b\\u51fb\\uff08fight\\uff09\\u4f1a\\u964d\\u4f4e 100\\u3002\\n *\\n * \\u6ee1\\u8db3\\u4ee5\\u4e0b\\u4e24\\u4e2a\\u6761\\u4ef6\\u5c31\\u53ef\\u4ee5\\u901a\\u8fc7 Automation \\u8865\\u5145\\u4e3a 1000\\uff1a\\n * 1. \\u5982\\u679c\\u751f\\u547d\\u503c\\u4e0d\\u8db3 1000\\n * 2. \\u7ecf\\u8fc7\\u4e00\\u4e2a\\u65f6\\u95f4\\u95f4\\u9694 interval\\n * \\u8bf7\\u5b8c\\u6210\\u4ee5\\u4e0b\\u4ee3\\u7801\\uff0c\\u5b9e\\u73b0\\u4e0a\\u8ff0\\u903b\\u8f91\\n *\\n * \\u53c2\\u8003\\u89c6\\u9891\\u6559\\u7a0b\\uff1ahttps://www.bilibili.com/video/BV1ed4y1N7Uv?p=9\\n *\\n * \\u4efb\\u52a1 3 \\u5b8c\\u6210\\u6807\\u5fd7\\uff1a\\n * 1. \\u901a\\u8fc7\\u547d\\u4ee4 \\\"yarn hardhat test\\\" \\u4f7f\\u5f97\\u5355\\u5143\\u6d4b\\u8bd5 11-12 \\u901a\\u8fc7\\n * 2. \\u901a\\u8fc7 Remix \\u5728 goerli \\u6d4b\\u8bd5\\u7f51\\u90e8\\u7f72\\uff0c\\u5e76\\u4e14\\u6d4b\\u8bd5\\u6267\\u884c\\u662f\\u5426\\u5982\\u9884\\u671f\\n */\\n\\ncontract AutomationTask is AutomationCompatible {\\n    uint256 public constant SIZE = 10;\\n    uint256 public constant MAXIMUM_HEALTH = 1000;\\n    uint256[SIZE] public healthPoint;\\n    uint256 public lastTimeStamp;\\n    uint256 public immutable interval;\\n\\n    /*\\n     * \\u6b65\\u9aa4 1 - \\u5728\\u6784\\u9020\\u51fd\\u6570\\u4e2d\\u5b8c\\u6210\\u6570\\u7ec4 healthPoint \\u7684\\u521d\\u59cb\\u5316\\n     */\\n    constructor(uint256 _interval) {\\n        lastTimeStamp = block.timestamp;\\n        interval = _interval;\\n        //\\u5728\\u6b64\\u6dfb\\u52a0 solidity \\u4ee3\\u7801\\n        for (uint i = 0; i < SIZE; i++) {\\n            healthPoint[i] = MAXIMUM_HEALTH;\\n        }\\n    }\\n\\n    /*\\n     * \\u6b65\\u9aa4 2 - \\u5b9a\\u4e49 fight \\u51fd\\u6570\\n     * \\u4f7f\\u5f97\\u7528\\u6237\\u53ef\\u4ee5\\u901a\\u8fc7 fight \\u51fd\\u6570\\u6539\\u53d8\\u6570\\u7ec4\\u4e2d\\u7684\\u751f\\u547d\\u503c\\n     */\\n    function fight(uint256 fighter) public {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0 solidity \\u4ee3\\u7801\\n        require(fighter <= SIZE - 1, \\\"Over SIZE!\\\");\\n        healthPoint[fighter] -= 100;\\n    }\\n\\n    /*\\n     * \\u6b65\\u9aa4 3 - \\u901a\\u8fc7 checkUpKeep \\u6765\\u68c0\\u6d4b\\uff1a\\n     * 1. \\u6570\\u7ec4 healthPoint \\u4e2d\\u7684\\u6570\\u503c\\u662f\\u5426\\u5c0f\\u4e8e 1000\\n     * 2. \\u662f\\u5426\\u7ecf\\u8fc7\\u4e86\\u65f6\\u95f4\\u95f4\\u9694 interval\\n     *\\n     * \\u6ce8\\u610f\\uff1a\\n     * \\u8fd9\\u90e8\\u5206\\u64cd\\u4f5c\\u5c06\\u7531 Chainlink \\u9884\\u8a00\\u673a\\u8282\\u70b9\\u5728\\u94fe\\u4e0b\\u8ba1\\u7b97\\uff0c\\u672c\\u5730\\u73af\\u5883\\u4e2d\\u5df2\\u7531\\u811a\\u672c\\u914d\\u7f6e\\n     * \\u53ef\\u4ee5\\u5c1d\\u8bd5\\u5728 checkUpKeep \\u51fd\\u6570\\u4e2d\\u6539\\u53d8\\u72b6\\u6001\\uff0c\\u89c2\\u5bdf\\u662f\\u5426\\u4f1a\\u53d1\\u751f\\u6539\\u53d8\\n     */\\n    function checkUpkeep(\\n        bytes memory /* checkData*/\\n    )\\n        public\\n        view\\n        override\\n        returns (bool upkeepNeeded, bytes memory /*performData*/)\\n    {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0\\u548c\\u4fee\\u6539 solidity \\u4ee3\\u7801\\n        upkeepNeeded = false;\\n        for (uint256 i = 0; i < SIZE && !upkeepNeeded; i++) {\\n            if (\\n                healthPoint[i] < MAXIMUM_HEALTH ||\\n                lastTimeStamp + interval >= block.timestamp\\n            ) {\\n                upkeepNeeded = true;\\n            }\\n        }\\n        return (upkeepNeeded, \\\"\\\");\\n    }\\n\\n    /*\\n     * \\u6b65\\u9aa4 4 - \\u901a\\u8fc7 performUpKeep \\u6765\\u5b8c\\u6210\\u5c06\\u8865\\u8db3\\u6570\\u7ec4\\u4e2d\\u751f\\u547d\\u503c\\u7684\\u64cd\\u4f5c\\n     * \\u4f8b\\u5982\\u53d1\\u73b0 healthPoint[0] = 500\\uff0c\\u5219\\u5c06\\u5176\\u589e\\u52a0 500 \\u53d8\\u4e3a 1000\\n     *\\n     * \\u6ce8\\u610f\\uff1a\\n     * \\u53ef\\u4ee5\\u901a\\u8fc7 performData \\u4f7f\\u7528 checkUpkeep \\u7684\\u8fd0\\u7b97\\u7ed3\\u679c\\uff0c\\u51cf\\u5c11 gas \\u8d39\\u7528\\n     */\\n    function performUpkeep(bytes memory /*performData*/) external override {\\n        //\\u5728\\u6b64\\u6dfb\\u52a0 solidity \\u4ee3\\u7801\\n        for (uint i = 0; i < SIZE; i++) {\\n            if (healthPoint[i] < MAXIMUM_HEALTH) {\\n                healthPoint[i] = MAXIMUM_HEALTH;\\n            }\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x5cd69e2c5aadd5b89777e52474c7d67391c1390da49eda83df9b26abe818604e\",\"license\":\"SEE LICENSE IN LICENSE\"}},\"version\":1}",
+    "bytecode": "0x60a060405234801561001057600080fd5b50604051610a10380380610a10833981810160405281019061003291906100be565b42600a81905550806080818152505060005b600a81101561007c576103e8600082600a8110610064576100636100eb565b5b0181905550808061007490610149565b915050610044565b5050610192565b600080fd5b6000819050919050565b61009b81610088565b81146100a657600080fd5b50565b6000815190506100b881610092565b92915050565b6000602082840312156100d4576100d3610083565b5b60006100e2848285016100a9565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600061015482610088565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8214156101875761018661011a565b5b600182019050919050565b60805161085c6101b46000396000818161024401526102ad015261085c6000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c8063bdffd2821161005b578063bdffd28214610116578063df6a37aa14610134578063e98971d014610150578063f5ff71541461016e57610088565b80633f3b3b271461008d5780634585e33b146100ab5780636e04ff0d146100c7578063947a36fb146100f8575b600080fd5b61009561019e565b6040516100a2919061038e565b60405180910390f35b6100c560048036038101906100c09190610503565b6101a4565b005b6100e160048036038101906100dc9190610503565b610203565b6040516100ef9291906105ef565b60405180910390f35b6101006102ab565b60405161010d919061038e565b60405180910390f35b61011e6102cf565b60405161012b919061038e565b60405180910390f35b61014e6004803603810190610149919061064b565b6102d4565b005b610158610354565b604051610165919061038e565b60405180910390f35b6101886004803603810190610183919061064b565b61035a565b604051610195919061038e565b60405180910390f35b600a5481565b60005b600a8110156101ff576103e8600082600a81106101c7576101c6610678565b5b015410156101ec576103e8600082600a81106101e6576101e5610678565b5b01819055505b80806101f7906106d6565b9150506101a7565b5050565b600060606000915060005b600a8110801561021c575082155b15610290576103e8600082600a811061023857610237610678565b5b015410806102735750427f0000000000000000000000000000000000000000000000000000000000000000600a54610270919061071f565b10155b1561027d57600192505b8080610288906106d6565b91505061020e565b50816040518060200160405280600081525091509150915091565b7f000000000000000000000000000000000000000000000000000000000000000081565b600a81565b6001600a6102e29190610775565b811115610324576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161031b90610806565b60405180910390fd5b6064600082600a811061033a57610339610678565b5b01600082825461034a9190610775565b9250508190555050565b6103e881565b600081600a811061036a57600080fd5b016000915090505481565b6000819050919050565b61038881610375565b82525050565b60006020820190506103a3600083018461037f565b92915050565b6000604051905090565b600080fd5b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610410826103c7565b810181811067ffffffffffffffff8211171561042f5761042e6103d8565b5b80604052505050565b60006104426103a9565b905061044e8282610407565b919050565b600067ffffffffffffffff82111561046e5761046d6103d8565b5b610477826103c7565b9050602081019050919050565b82818337600083830152505050565b60006104a66104a184610453565b610438565b9050828152602081018484840111156104c2576104c16103c2565b5b6104cd848285610484565b509392505050565b600082601f8301126104ea576104e96103bd565b5b81356104fa848260208601610493565b91505092915050565b600060208284031215610519576105186103b3565b5b600082013567ffffffffffffffff811115610537576105366103b8565b5b610543848285016104d5565b91505092915050565b60008115159050919050565b6105618161054c565b82525050565b600081519050919050565b600082825260208201905092915050565b60005b838110156105a1578082015181840152602081019050610586565b838111156105b0576000848401525b50505050565b60006105c182610567565b6105cb8185610572565b93506105db818560208601610583565b6105e4816103c7565b840191505092915050565b60006040820190506106046000830185610558565b818103602083015261061681846105b6565b90509392505050565b61062881610375565b811461063357600080fd5b50565b6000813590506106458161061f565b92915050565b600060208284031215610661576106606103b3565b5b600061066f84828501610636565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006106e182610375565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff821415610714576107136106a7565b5b600182019050919050565b600061072a82610375565b915061073583610375565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0382111561076a576107696106a7565b5b828201905092915050565b600061078082610375565b915061078b83610375565b92508282101561079e5761079d6106a7565b5b828203905092915050565b600082825260208201905092915050565b7f4f7665722053495a452100000000000000000000000000000000000000000000600082015250565b60006107f0600a836107a9565b91506107fb826107ba565b602082019050919050565b6000602082019050818103600083015261081f816107e3565b905091905056fea2646970667358221220b55416ce2fd708f63d6836c099e270788bfc243a38a095632292008acada5e6c64736f6c63430008090033",
+    "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c8063bdffd2821161005b578063bdffd28214610116578063df6a37aa14610134578063e98971d014610150578063f5ff71541461016e57610088565b80633f3b3b271461008d5780634585e33b146100ab5780636e04ff0d146100c7578063947a36fb146100f8575b600080fd5b61009561019e565b6040516100a2919061038e565b60405180910390f35b6100c560048036038101906100c09190610503565b6101a4565b005b6100e160048036038101906100dc9190610503565b610203565b6040516100ef9291906105ef565b60405180910390f35b6101006102ab565b60405161010d919061038e565b60405180910390f35b61011e6102cf565b60405161012b919061038e565b60405180910390f35b61014e6004803603810190610149919061064b565b6102d4565b005b610158610354565b604051610165919061038e565b60405180910390f35b6101886004803603810190610183919061064b565b61035a565b604051610195919061038e565b60405180910390f35b600a5481565b60005b600a8110156101ff576103e8600082600a81106101c7576101c6610678565b5b015410156101ec576103e8600082600a81106101e6576101e5610678565b5b01819055505b80806101f7906106d6565b9150506101a7565b5050565b600060606000915060005b600a8110801561021c575082155b15610290576103e8600082600a811061023857610237610678565b5b015410806102735750427f0000000000000000000000000000000000000000000000000000000000000000600a54610270919061071f565b10155b1561027d57600192505b8080610288906106d6565b91505061020e565b50816040518060200160405280600081525091509150915091565b7f000000000000000000000000000000000000000000000000000000000000000081565b600a81565b6001600a6102e29190610775565b811115610324576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161031b90610806565b60405180910390fd5b6064600082600a811061033a57610339610678565b5b01600082825461034a9190610775565b9250508190555050565b6103e881565b600081600a811061036a57600080fd5b016000915090505481565b6000819050919050565b61038881610375565b82525050565b60006020820190506103a3600083018461037f565b92915050565b6000604051905090565b600080fd5b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610410826103c7565b810181811067ffffffffffffffff8211171561042f5761042e6103d8565b5b80604052505050565b60006104426103a9565b905061044e8282610407565b919050565b600067ffffffffffffffff82111561046e5761046d6103d8565b5b610477826103c7565b9050602081019050919050565b82818337600083830152505050565b60006104a66104a184610453565b610438565b9050828152602081018484840111156104c2576104c16103c2565b5b6104cd848285610484565b509392505050565b600082601f8301126104ea576104e96103bd565b5b81356104fa848260208601610493565b91505092915050565b600060208284031215610519576105186103b3565b5b600082013567ffffffffffffffff811115610537576105366103b8565b5b610543848285016104d5565b91505092915050565b60008115159050919050565b6105618161054c565b82525050565b600081519050919050565b600082825260208201905092915050565b60005b838110156105a1578082015181840152602081019050610586565b838111156105b0576000848401525b50505050565b60006105c182610567565b6105cb8185610572565b93506105db818560208601610583565b6105e4816103c7565b840191505092915050565b60006040820190506106046000830185610558565b818103602083015261061681846105b6565b90509392505050565b61062881610375565b811461063357600080fd5b50565b6000813590506106458161061f565b92915050565b600060208284031215610661576106606103b3565b5b600061066f84828501610636565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006106e182610375565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff821415610714576107136106a7565b5b600182019050919050565b600061072a82610375565b915061073583610375565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0382111561076a576107696106a7565b5b828201905092915050565b600061078082610375565b915061078b83610375565b92508282101561079e5761079d6106a7565b5b828203905092915050565b600082825260208201905092915050565b7f4f7665722053495a452100000000000000000000000000000000000000000000600082015250565b60006107f0600a836107a9565b91506107fb826107ba565b602082019050919050565b6000602082019050818103600083015261081f816107e3565b905091905056fea2646970667358221220b55416ce2fd708f63d6836c099e270788bfc243a38a095632292008acada5e6c64736f6c63430008090033",
+    "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+    },
+    "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+    },
+    "storageLayout": {
+        "storage": [
+            {
+                "astId": 226,
+                "contract": "contracts/AutomationTask.sol:AutomationTask",
+                "label": "healthPoint",
+                "offset": 0,
+                "slot": "0",
+                "type": "t_array(t_uint256)10_storage"
+            },
+            {
+                "astId": 228,
+                "contract": "contracts/AutomationTask.sol:AutomationTask",
+                "label": "lastTimeStamp",
+                "offset": 0,
+                "slot": "10",
+                "type": "t_uint256"
+            }
+        ],
+        "types": {
+            "t_array(t_uint256)10_storage": {
+                "base": "t_uint256",
+                "encoding": "inplace",
+                "label": "uint256[10]",
+                "numberOfBytes": "320"
+            },
+            "t_uint256": {
+                "encoding": "inplace",
+                "label": "uint256",
+                "numberOfBytes": "32"
+            }
+        }
     }
-  }
 }

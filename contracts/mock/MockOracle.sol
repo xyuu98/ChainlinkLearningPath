@@ -18,7 +18,7 @@ contract MockOracle is ChainlinkRequestInterface, LinkTokenReceiver {
     }
 
     LinkTokenInterface internal LinkToken;
-    mapping (bytes32 => Request) private commitments;
+    mapping(bytes32 => Request) private commitments;
 
     event OracleRequest(
         bytes32 indexed specId,
@@ -47,16 +47,13 @@ contract MockOracle is ChainlinkRequestInterface, LinkTokenReceiver {
         uint256 _nonce,
         uint256 _dataVersion,
         bytes calldata _data
-    ) external 
-    override 
-    onlyLINK 
-    checkCallbackAddress(_callbackAddress) {
+    ) external override onlyLINK checkCallbackAddress(_callbackAddress) {
         bytes32 requestId = keccak256(abi.encodePacked(_sender, _nonce));
         require(
             commitments[requestId].callbackAddr == address(0),
             "Must use a unique ID"
         );
-        
+
         uint256 expiration = now.add(EXPIRY_TIME);
 
         commitments[requestId] = Request(_callbackAddress, _callbackFunctionId);
@@ -74,14 +71,16 @@ contract MockOracle is ChainlinkRequestInterface, LinkTokenReceiver {
         );
     }
 
-    function fulfillOracleRequest(bytes32 _requestId, bytes32 _data) 
-        external 
-        isValidRequest(_requestId) 
-        returns (bool) 
-    {
+    function fulfillOracleRequest(
+        bytes32 _requestId,
+        bytes32 _data
+    ) external isValidRequest(_requestId) returns (bool) {
         Request memory req = commitments[_requestId];
         delete commitments[_requestId];
-        require(gasleft() >= MINIMUM_CONSUMER_GAS_LIMIT, "Must provide consumer enough gas");
+        require(
+            gasleft() >= MINIMUM_CONSUMER_GAS_LIMIT,
+            "Must provide consumer enough gas"
+        );
 
         (bool success, ) = req.callbackAddr.call(
             abi.encodeWithSelector(req.callbackFunctionId, _requestId, _data)
@@ -96,7 +95,7 @@ contract MockOracle is ChainlinkRequestInterface, LinkTokenReceiver {
         uint256 _expiration
     ) external override {
         require(
-            commitments[_requestId].callbackAddr != address(0), 
+            commitments[_requestId].callbackAddr != address(0),
             "must use a unique ID"
         );
 
@@ -124,6 +123,4 @@ contract MockOracle is ChainlinkRequestInterface, LinkTokenReceiver {
         require(_to != address(LinkToken), "Cannot callback to LINK");
         _;
     }
-
-
 }

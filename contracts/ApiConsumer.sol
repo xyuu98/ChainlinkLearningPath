@@ -9,11 +9,11 @@ import "./WeatherToken.sol";
  * 任务 6：
  * 通过 Chainlink AnyApi 给在任务 5 中部署的动态 NFT 更新数据
  * 完成 requestTempreture 和 fulfill
- * 
+ *
  * 任务 6 完成标志：
  * 1. fulfill 函数可以成功调用 weatherToken 的 setUriToUpdate 函数
  * 2. 可以在 opensea 的测试网（https://testnets.opensea.io/zh-CN）中看到 NFT 的图片发生了更新
-*/
+ */
 
 contract APIConsumer is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
@@ -32,7 +32,7 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
         nftAddress = _nftAddress;
     }
 
-    function updateNftAddress(address addressToUpdate) public onlyOwner  {
+    function updateNftAddress(address addressToUpdate) public onlyOwner {
         nftAddress = addressToUpdate;
     }
 
@@ -43,7 +43,7 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
             this.fulfill.selector
         );
 
-        // 可以通过高德或者其他你喜欢的 api 获得天气数据 
+        // 可以通过高德或者其他你喜欢的 api 获得天气数据
         // 高德 Api 使用方法：https://lbs.amap.com/api/webservice/guide/api/weatherinfo
         // 补完下面一行代码
         req.add(

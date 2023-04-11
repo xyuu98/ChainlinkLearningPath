@@ -17,20 +17,24 @@ import "@openzeppelin/contracts/utils/Counters.sol";
  *  - 如果温度高于或者等于 20 度 - uriToUpdate = METADATA_ABOVE
  * updateTokenUri 实现功能
  *  - 将 tokenId 的 uri 改为 uriToUpdate
- * 
+ *
  * 任务 5 完成标志：
  * 1. 可以通过 4_nft_basic_test.js 中的所有测试：4-1 到 4-5
  * 2. 可以在 opensea 的测试网（https://testnets.opensea.io/zh-CN）中看到发布的动态 NFT
  * 3. 通过调用 updateTokenUri 来实现图片的更新
-*/
+ */
 
 contract WeatherToken is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
 
-    string constant METADATA_UNKNOWN = "ipfs://QmTH56C6s1PQcP3T4oNqXbeaY2gcSw9cYs5yCsozmzhobv";
-    string constant METADATA_BELOW = "ipfs://QmYjAtBPAo2qjtiYzUozFtcXCwgCLLLJeVgSphfB6t2yvz";
-    string constant METADATA_AVERAGE = "ipfs://QmU6gvcWXBknL8d2czoxyC5N5bnFzAFDwHS3hDsWVw8Ttd";
-    string constant METADATA_ABOVE = "ipfs://QmVm1ne2q3cHPvyJtEJKQ7SMbr8TFMGJK6SYYiqC9sYvRf";
+    string constant METADATA_UNKNOWN =
+        "ipfs://QmTH56C6s1PQcP3T4oNqXbeaY2gcSw9cYs5yCsozmzhobv";
+    string constant METADATA_BELOW =
+        "ipfs://QmYjAtBPAo2qjtiYzUozFtcXCwgCLLLJeVgSphfB6t2yvz";
+    string constant METADATA_AVERAGE =
+        "ipfs://QmU6gvcWXBknL8d2czoxyC5N5bnFzAFDwHS3hDsWVw8Ttd";
+    string constant METADATA_ABOVE =
+        "ipfs://QmVm1ne2q3cHPvyJtEJKQ7SMbr8TFMGJK6SYYiqC9sYvRf";
 
     Counters.Counter private _tokenIdCounter;
 
@@ -58,32 +62,30 @@ contract WeatherToken is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
     // The following functions are overrides required by Solidity.
 
-    function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
-        internal
-        override(ERC721, ERC721Enumerable)
-    {
+    function _beforeTokenTransfer(
+        address from,
+        address to,
+        uint256 tokenId,
+        uint256 batchSize
+    ) internal override(ERC721, ERC721Enumerable) {
         super._beforeTokenTransfer(from, to, tokenId, batchSize);
     }
 
-    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+    function _burn(
+        uint256 tokenId
+    ) internal override(ERC721, ERC721URIStorage) {
         super._burn(tokenId);
     }
 
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        override(ERC721, ERC721URIStorage)
-        returns (string memory)
-    {
+    function tokenURI(
+        uint256 tokenId
+    ) public view override(ERC721, ERC721URIStorage) returns (string memory) {
         return super.tokenURI(tokenId);
     }
 
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721, ERC721Enumerable)
-        returns (bool)
-    {
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view override(ERC721, ERC721Enumerable) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
 }
