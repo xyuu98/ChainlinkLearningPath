@@ -94,7 +94,7 @@ contract DataFeedTask {
         return ethPriceFeed;
     }
 
-    // DataFeedTask deployed at 0x364239A3fbE83420C81A5CAd80e567b5B731A2E7
+    // DataFeedTask deployed at 0x9625a1ed1dd89daefe31dc21e26953b33e35a1a2
     // Successfully verified contract DataFeedTask on Etherscan.
     // https://goerli.etherscan.io/address/0x364239A3fbE83420C81A5CAd80e567b5B731A2E7#code
 }

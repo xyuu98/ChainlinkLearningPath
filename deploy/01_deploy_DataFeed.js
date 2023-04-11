@@ -13,9 +13,9 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     let ethUsdPriceFeedAddress
 
     if (chainId == 31337) {
-        const linkUsdAggregator = await deployments.get("MockV3Aggregator")
-        const btcUsdAggregator = await deployments.get("MockV3Aggregator")
-        const ethUsdAggregator = await deployments.get("MockV3Aggregator")
+        const linkUsdAggregator = await deployments.get("MockV3Aggregator-Link")
+        const btcUsdAggregator = await deployments.get("MockV3Aggregator-ETH")
+        const ethUsdAggregator = await deployments.get("MockV3Aggregator-BTC")
         linkUsdPriceFeedAddress = linkUsdAggregator.address
         btcUsdPriceFeedAddress = btcUsdAggregator.address
         ethUsdPriceFeedAddress = ethUsdAggregator.address

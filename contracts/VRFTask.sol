@@ -9,37 +9,36 @@ import "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
  * 通过 fulfillRandomWords 函数给 s_randomness[] 填入 5 个随机数
  * 保证 5 个随机数为 5 以内，并且不重复
  * 参考视频教程： https://www.bilibili.com/video/BV1ed4y1N7Uv
- * 
+ *
  * 任务 2 完成标志：
  * 1. 通过命令 "yarn hardhat test" 使得单元测试 8-10 通过
  * 2. 通过 Remix 在 goerli 测试网部署，并且测试执行是否如预期
-*/
-
+ */
 
 contract VRFTask is VRFConsumerBaseV2 {
     VRFCoordinatorV2Interface immutable COORDINATOR;
-    
-    /* 
+
+    /*
      * 步骤 1 - 获得 VRFCoordinator 合约的地址和所对应的 keyHash
      * 修改变量
      *   CALL_BACK_LIMIT：回调函数最大 gas 数量
      *   REQUEST_CONFIRMATIONS：最小确认区块数
      *   NUM_WORDS：单次申请随机数的数量
-     * 
+     *
      * 注意：
-     * 通过 Remix 部署在非本地环境时，相关参数请查看 
-     * https://docs.chain.link/docs/vrf/v2/supported-networks/，获取 keyHash 的指和 vrfCoordinator 的地址
+     * 通过 Remix 部署在非本地环境时，相关参数请查看
+     * https://docs.chain.link/docs/vrf/v2/supported-networks/，获取 keyHash 的值和 vrfCoordinator 的地址
      * 本地环境在测试脚本中已经自动配置
-     * 
-     */ 
+     *
+     */
 
     // Chainlink VRF 在接收到请求后，会通过 fulfillRandomWords 将数据写回到用户合约，此过程需要消耗 gas
     // CALL_BACK_LIMIT 是回调函数可以消耗的最大 gas，根据回调函数的逻辑适当调整 CALL_BACK_LIMIT
     // 详情请查看：https://docs.chain.link/vrf/v2/subscription/examples/get-a-random-number#analyzing-the-contract
-    uint32 constant CALL_BACK_LIMIT = 100;
-    
+    uint32 constant CALL_BACK_LIMIT = 200_000;
+
     // Chainlink VRF 在返回随机数之前应该等待的 Confirmation，值越大，返回的值越安全
-    uint16 constant REQUEST_CONFIRMATIONS = 1;
+    uint16 constant REQUEST_CONFIRMATIONS = 3;
 
     // Chainlink VRF 在每次请求后返回的随机数数量
     uint32 constant NUM_WORDS = 1;
@@ -59,12 +58,12 @@ contract VRFTask is VRFConsumerBaseV2 {
 
     event ReturnedRandomness(uint256[] randomWords);
 
-    modifier onlyOwner {
+    modifier onlyOwner() {
         require(msg.sender == s_owner);
         _;
     }
 
-    /**  
+    /**
      * 步骤 2 - 在构造函数中，初始化相关变量
      * COORDINATOR，s_subscriptionId 和 s_keyHash
      * */
@@ -74,31 +73,73 @@ contract VRFTask is VRFConsumerBaseV2 {
         bytes32 _keyHash
     ) VRFConsumerBaseV2(vrfCoordinator) {
         s_owner = msg.sender;
-        
+
         //修改以下 solidity 代码
-        COORDINATOR = VRFCoordinatorV2Interface(address(0));
-        s_subscriptionId = 0;
-        s_keyHash = "";
+        COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
+        s_subscriptionId = _subscriptionId;
+        s_keyHash = _keyHash;
     }
 
-    /** 
+    /**
      * 步骤 3 - 发送随机数请求
-     * */ 
+     * */
     function requestRandomWords() external onlyOwner {
         //在此添加并且修改 solidity 代码
+        require(msg.sender == s_owner);
+        s_requestId = COORDINATOR.requestRandomWords(
+            s_keyHash,
+            s_subscriptionId,
+            REQUEST_CONFIRMATIONS,
+            CALL_BACK_LIMIT,
+            NUM_WORDS
+        );
     }
 
     /**
      * 步骤 4 - 接受随机数，完成逻辑获取 5 个 5 以内**不重复**的随机数
      * 关于如何使得获取的随机数不重复，清参考以下代码
      * https://gist.github.com/cleanunicorn/d27484a2488e0eecec8ce23a0ad4f20b
-     *  */ 
-    function fulfillRandomWords(uint256 requestId, uint256[] memory _randomWords)
-        internal
-        override
-    {
-        //在此添加 solidity 代码
-        
+     *  */
+    function fulfillRandomWords(
+        uint256 requestId,
+        uint256[] memory _randomWords
+    ) internal override {
+        uint[] memory result = new uint[](5);
+
+        // 初始化数组
+        for (uint i = 0; i < 5; i++) {
+            result[i] = i + 1;
+        }
+
+        // VRF获得的随机数作为熵，根据提供的熵设置初始随机性
+        bytes32 random = keccak256(abi.encodePacked(_randomWords[0]));
+
+        // 设置将被交换的数组的最后一项
+        uint last_item = 4;
+
+        // 我们需要进行 `size - 1` 次迭代来完全打乱数组
+        for (uint i = 1; i < 4; i++) {
+            // 根据随机性选择一个数字
+            uint selected_item = uint(random) % last_item;
+
+            // 交换项目`selected_item <> last_item`
+            uint aux = result[last_item];
+            result[last_item] = result[selected_item];
+            result[selected_item] = aux;
+
+            // 减少可能洗牌的大小
+            // 保留已经洗牌的项目
+            // 已经洗牌的项目在数组的末尾
+            last_item--;
+
+            // 产生新的随机性
+            random = keccak256(abi.encodePacked(random));
+        }
+        s_randomWords = result;
         emit ReturnedRandomness(s_randomWords);
     }
 }
+
+// VRFTask deployed at 0x9625a1ed1dd89daefe31dc21e26953b33e35a1a2
+// Successfully verified contract DataFeedTask on Etherscan.
+// https://goerli.etherscan.io/address/0xc243790f5db9159861a0138362fa2336da424bad#code
