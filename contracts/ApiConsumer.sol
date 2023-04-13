@@ -18,15 +18,19 @@ import "./WeatherToken.sol";
 contract APIConsumer is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
+    WeatherToken weatherToken;
+
     uint256 public temperature;
     bytes32 private jobId;
     uint256 private fee;
     address public nftAddress;
 
+    event RequestTemperature(bytes32 indexed requestId, uint256 temperature);
+
     constructor(address _nftAddress) ConfirmedOwner(msg.sender) {
         // 代码中的设置适用于
-        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
-        setChainlinkOracle(0xCC79157eb46F5624204f47AB42b3906cAA40eaB7);
+        setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
+        setChainlinkOracle(0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD);
         jobId = "ca98366cc7314957b8c012c72f05aeeb";
         fee = (1 * LINK_DIVISIBILITY) / 10; // 0,1 * 10**18 (Varies by network and job)
         nftAddress = _nftAddress;
@@ -48,12 +52,13 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
         // 补完下面一行代码
         req.add(
             "get",
-            "https://restapi.amap.com/v3/weather/weatherInfo?city=110101&key=<key>"
+            "https://restapi.amap.com/v3/weather/weatherInfo?city=110101&key=<28279406a3ab9d4110b99f76b3bb4d2c>"
         );
 
         // 完成 path：指的是 json 数据中的有效信息的位置
         // 补完下面一行代码
-        req.add("path", "");
+        // {"status":"1","count":"1","info":"OK","infocode":"10000","lives":[{"province":"北京","city":"东城区","adcode":"110101","weather":"浮尘","temperature":"19","winddirection":"东北","windpower":"≤3","humidity":"40","reporttime":"2023-04-13 11:39:00","temperature_float":"19.0","humidity_float":"40.0"}]}
+        req.add("path", "lives,temperature");
 
         int256 timesAmount = 10 ** 18;
         req.addInt("times", timesAmount);
@@ -69,6 +74,9 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
     ) public recordChainlinkFulfillment(_requestId) {
         // 通过返回的 temperature 调用 WeatherToken 中的 setUriToUpdate 函数
         // 请在此添加代码
+        temperature = _temperature;
+        weatherToken.setUriToUpdate(temperature);
+        emit RequestTemperature(_requestId, _temperature);
     }
 
     function withdrawLink() public onlyOwner {
