@@ -24,7 +24,7 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
     address public nftAddress;
     WeatherToken weatherToken;
 
-    event RequestTemperature(bytes32 indexed requestId, uint256 temperature);
+    event RequestTemperature(uint256 temperature);
 
     constructor(address _nftAddress) ConfirmedOwner(msg.sender) {
         // 代码中的设置适用于
@@ -58,7 +58,7 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
         // 完成 path：指的是 json 数据中的有效信息的位置
         // 补完下面一行代码
         // {"status":"1","count":"1","info":"OK","infocode":"10000","lives":[{"province":"北京","city":"东城区","adcode":"110101","weather":"浮尘","temperature":"19","winddirection":"东北","windpower":"≤3","humidity":"40","reporttime":"2023-04-13 11:39:00","temperature_float":"19.0","humidity_float":"40.0"}]}
-        req.add("path", "$.lives[:5].temperature");
+        req.add("path", "lives,0,temperature");
 
         int256 timesAmount = 10 ** 18;
         req.addInt("times", timesAmount);
@@ -74,9 +74,9 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
     ) public recordChainlinkFulfillment(_requestId) {
         // 通过返回的 temperature 调用 WeatherToken 中的 setUriToUpdate 函数
         // 请在此添加代码
+        emit RequestTemperature(temperature);
         temperature = _temperature;
         weatherToken.setUriToUpdate(temperature);
-        emit RequestTemperature(_requestId, _temperature);
     }
 
     function withdrawLink() public onlyOwner {
@@ -88,5 +88,5 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
     }
 }
 
-// APIConsumer deployed at 0xa28CF010AeDCD9dcE05D2DDafA3ffCC58F1856CD
-// https://sepolia.etherscan.io/address/0xa28CF010AeDCD9dcE05D2DDafA3ffCC58F1856CD#code
+// APIConsumer deployed at 0xCefaFC1DdC3D8c2cEdcCb8c7Aa709f339a40E908
+// https://sepolia.etherscan.io/address/0xCefaFC1DdC3D8c2cEdcCb8c7Aa709f339a40E908#code
