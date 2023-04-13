@@ -18,12 +18,11 @@ import "./WeatherToken.sol";
 contract APIConsumer is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
-    WeatherToken weatherToken;
-
     uint256 public temperature;
     bytes32 private jobId;
     uint256 private fee;
     address public nftAddress;
+    WeatherToken weatherToken;
 
     event RequestTemperature(bytes32 indexed requestId, uint256 temperature);
 
@@ -34,6 +33,7 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
         jobId = "ca98366cc7314957b8c012c72f05aeeb";
         fee = (1 * LINK_DIVISIBILITY) / 10; // 0,1 * 10**18 (Varies by network and job)
         nftAddress = _nftAddress;
+        weatherToken = WeatherToken(nftAddress);
     }
 
     function updateNftAddress(address addressToUpdate) public onlyOwner {
@@ -52,13 +52,13 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
         // 补完下面一行代码
         req.add(
             "get",
-            "https://restapi.amap.com/v3/weather/weatherInfo?city=110101&key=<28279406a3ab9d4110b99f76b3bb4d2c>"
+            "https://restapi.amap.com/v3/weather/weatherInfo?city=110101&key=28279406a3ab9d4110b99f76b3bb4d2c"
         );
 
         // 完成 path：指的是 json 数据中的有效信息的位置
         // 补完下面一行代码
         // {"status":"1","count":"1","info":"OK","infocode":"10000","lives":[{"province":"北京","city":"东城区","adcode":"110101","weather":"浮尘","temperature":"19","winddirection":"东北","windpower":"≤3","humidity":"40","reporttime":"2023-04-13 11:39:00","temperature_float":"19.0","humidity_float":"40.0"}]}
-        req.add("path", "lives,temperature");
+        req.add("path", "$.lives[:5].temperature");
 
         int256 timesAmount = 10 ** 18;
         req.addInt("times", timesAmount);
@@ -87,3 +87,6 @@ contract APIConsumer is ChainlinkClient, ConfirmedOwner {
         );
     }
 }
+
+// APIConsumer deployed at 0xa28CF010AeDCD9dcE05D2DDafA3ffCC58F1856CD
+// https://sepolia.etherscan.io/address/0xa28CF010AeDCD9dcE05D2DDafA3ffCC58F1856CD#code

@@ -60,9 +60,11 @@ contract WeatherToken is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         // 1. 比较 tokenId 现在的 uri 和 uriToUpdate
         // 2. 如果不相同，就更新 tokenId 的 uri
         // 在这里添加代码
-        string memory nowUri = tokenURI(tokenId);
-        if (keccak256(bytes(nowUri)) != keccak256(bytes(uriToUpdate))) {
-            nowUri = uriToUpdate;
+
+        if (
+            keccak256(bytes(tokenURI(tokenId))) != keccak256(bytes(uriToUpdate))
+        ) {
+            _setTokenURI(tokenId, uriToUpdate);
         }
     }
 
@@ -102,3 +104,6 @@ contract WeatherToken is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         return super.supportsInterface(interfaceId);
     }
 }
+
+// WeatherToken deployed at 0x740daca9f5744aa1fBd4634c95fcD2b8e7E68Bd0
+// https://sepolia.etherscan.io/address/0x740daca9f5744aa1fBd4634c95fcD2b8e7E68Bd0#code

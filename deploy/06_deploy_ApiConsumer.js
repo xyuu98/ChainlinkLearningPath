@@ -8,31 +8,28 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const { deployer } = await getNamedAccounts()
     const chainId = network.config.chainId
 
-    let s_oracle = networkConfig[chainId]["oracle"]
-    // let s_jobId = networkConfig[chainId]["jobId"]
-    let s_fee = networkConfig[chainId]["fee"]
-    let s_link = networkConfig[chainId]["link"]
-
     if (chainId == 31337) {
-        log("请使用其他链部署 AnyApiTask ···")
+        log("请使用其他链部署 APIConsumer ···")
     } else {
         log("----------------------------------------------------")
-        log("部署 AnyApiTask 并等待确认...")
-        AnyApiTask = await deploy("AnyApiTask", {
+        log("部署 APIConsumer 并等待确认...")
+        APIConsumer = await deploy("APIConsumer", {
             from: deployer,
-            args: [s_oracle, /*s_jobId,*/ s_fee, s_link],
+            args: ["0x740daca9f5744aa1fBd4634c95fcD2b8e7E68Bd0"],
             log: true,
             waitConfirmations: network.config.blockConfirmations || 1,
         })
-        log(`AnyApiTask deployed at ${AnyApiTask.address}`)
+        log(`APIConsumer deployed at ${APIConsumer.address}`)
     }
 
     if (
         !developmentChains.includes(network.name) &&
         process.env.ETHERSCAN_API_KEY
     ) {
-        await verify(AnyApiTask.address, [s_oracle, /*s_jobId,*/ s_fee, s_link])
+        await verify(APIConsumer.address, [
+            "0x740daca9f5744aa1fBd4634c95fcD2b8e7E68Bd0",
+        ])
     }
 }
 
-module.exports.tags = ["all", "anyapitask"]
+module.exports.tags = ["all", "apiconsumer"]
